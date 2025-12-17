@@ -1,11 +1,75 @@
-<div align="center">
+# SpriteForge - 视频转游戏序列帧工具 (Video to Sprite Sheet)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+SpriteForge 是一个运行在浏览器中的纯前端工具，旨在帮助游戏开发者、UI设计师将短视频片段快速转换为高质量的序列帧（Sprite Sheet / 精灵图）。
 
-  <h1>Built with AI Studio</h2>
+它利用 HTML5 Canvas 技术在本地处理视频，支持自动提取帧、绿幕抠图（去背景）、自定义尺寸输出，保障隐私且处理迅速。
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+![App Screenshot](https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3)
+*(注：此处可替换为您的实际应用截图)*
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## ✨ 核心功能
 
-</div>
+*   **🛡️ 纯前端运行**：所有视频处理均在本地浏览器完成，无需上传服务器，保护素材隐私。
+*   **🎞️ 智能帧提取**：
+    *   可视化时间轴裁剪，精准控制提取范围。
+    *   支持自定义采样率 (FPS) 和实时进度反馈。
+*   **🎨 绿幕抠图 (Chroma Key)**：
+    *   内置专业级抠图算法，支持去除纯色背景（绿幕/蓝幕）。
+    *   **吸管工具**：直接点击画面吸取背景色。
+    *   参数微调：支持调节相似度 (Similarity)、平滑度 (Smoothness) 以消除边缘锯齿。
+*   **📐 灵活的输出设置**：
+    *   **按比例缩放**：保持原始宽高比进行缩放。
+    *   **固定尺寸 (POT)**：支持强制输出为 64x64, 128x128, 256x256 等常用游戏纹理尺寸。
+    *   自定义列数、间距 (Padding)。
+*   **🖱️ 交互式编辑**：
+    *   拖拽排序：自由调整每一帧的顺序。
+    *   批量管理：全选/反选、单帧删除。
+
+## 🚀 使用指南
+
+1.  **上传视频**：
+    *   支持 MP4, WebM 等常见 Web 视频格式。
+    *   直接拖拽文件或点击上传区域。
+2.  **提取帧**：
+    *   拖动时间轴滑块选择起始和结束时间。
+    *   选择合适的 FPS（如 10 FPS），点击“提取帧”。
+3.  **编辑与处理**：
+    *   在预览区开启“绿幕抠图”，使用吸管选取背景色，调整滑块直到背景透明。
+    *   在下方网格中拖拽调整帧顺序，点击右上角 `X` 删除不需要的帧。
+4.  **生成与下载**：
+    *   在“布局与尺寸”中设置输出模式（推荐使用固定尺寸以适配游戏引擎）。
+    *   点击“生成精灵图预览”，检查无误后点击“下载 PNG”。
+
+## 🛠️ 技术栈
+
+本项目基于现代前端技术构建：
+
+*   **React 19**: 构建用户界面。
+*   **Tailwind CSS**: 快速、响应式的样式设计。
+*   **HTML5 Canvas API**: 处理视频帧绘制、像素级抠图与图像合成。
+*   **Lucide React**: 优雅的图标库。
+
+## 💻 本地开发
+
+本项目源代码使用 `.tsx` 编写。若要进行本地二次开发，建议使用 Vite 环境。
+
+1.  **克隆项目**
+    ```bash
+    git clone https://github.com/your-username/sprite-forge.git
+    cd sprite-forge
+    ```
+
+2.  **安装依赖**
+    *(假设你已经初始化了一个标准的 React + Vite 项目并将文件放入了 src 目录)*
+    ```bash
+    npm install lucide-react
+    ```
+
+3.  **运行项目**
+    ```bash
+    npm run dev
+    ```
+
+## 📄 许可证
+
+MIT License

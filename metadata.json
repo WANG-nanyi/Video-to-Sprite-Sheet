@@ -1,0 +1,5 @@
+{
+  "name": "视频转序列帧工具",
+  "description": "将视频片段转换为游戏可用的序列帧（精灵图/雪碧图），支持绿幕抠图去背。",
+  "requestFramePermissions": []
+}
