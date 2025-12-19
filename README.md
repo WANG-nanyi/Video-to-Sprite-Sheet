@@ -1,6 +1,6 @@
-# SpriteForge - 视频转游戏序列帧工具 (Video to Sprite Sheet)
+# Video-to-Sprite-Sheet - 视频转游戏序列帧工具 (Video to Sprite Sheet)
 
-SpriteForge 是一个运行在浏览器中的纯前端工具，帮助游戏开发者、UI 设计师将短视频片段快速转换为高质量的序列帧（Sprite Sheet / 精灵图）。
+Video-to-Sprite-Sheet 是一个运行在浏览器中的纯前端工具，帮助游戏开发者、UI 设计师将短视频片段快速转换为高质量的序列帧（Sprite Sheet / 精灵图）。
 
 它利用 HTML5 Canvas 技术在本地处理视频，支持自动提取帧、绿幕抠图（去背景）、自定义尺寸输出，所有处理都在本地浏览器完成，保护素材隐私。
 
@@ -50,26 +50,30 @@ npm -v
 
 *   **方式 A：通过 Git 克隆（推荐）**
     ```bash
-    git clone https://github.com/your-username/sprite-forge.git
-    cd sprite-forge
+    git clone https://github.com/WANG-nanyi/Video-to-Sprite-Sheet.git
+    cd Video-to-Sprite-Sheet
     ```
-    *把 `your-username/sprite-forge` 换成你自己仓库的真实地址。*
 
 *   **方式 B：下载 ZIP 压缩包**
     1.  在 GitHub 打开本项目页面
     2.  点击绿色的 **Code** 按钮 → 选择 **Download ZIP**
-    3.  解压到任意文件夹，例如：`D:\projects\sprite-forge`
+    3.  解压到任意文件夹，例如：`D:\projects\Video-to-Sprite-Sheet`
     4.  打开命令行，进入该目录，例如：
         ```bash
-        cd D:\projects\sprite-forge
+        cd D:\projects\Video-to-Sprite-Sheet
         ```
 
 ### 3. 安装依赖
-在项目根目录（可以看到 `package.json` 的那个目录）执行：
+在项目根目录（可以看到 `package.json` 和 `package-lock.json` 的那个目录）执行：
+
 ```bash
-npm install
+# 推荐：使用 package-lock.json 中锁定的版本安装
+npm ci
+
+# 如果你需要更新依赖或遇到安装问题，也可以改用：
+# npm install
 ```
-这条命令会根据 `package.json` 自动安装项目需要的全部依赖，包括 React、Vite、Lucide 等。只要不报错，就可以进行下一步。
+这条命令会根据配置文件自动安装项目需要的全部依赖。只要不报错，就可以进行下一步。
 
 ### 4. 启动开发服务器
 继续在项目根目录执行：
@@ -88,7 +92,7 @@ npm run dev
 2.  在地址栏输入并访问：`http://localhost:5173/`
     *(如果终端里显示的是另外一个地址或端口，以终端显示的为准)*
 
-看到 SpriteForge 的界面，就表示在本地部署成功了。
+看到工具界面，就表示在本地部署成功了。
 
 ---
 
